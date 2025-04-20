@@ -75,12 +75,12 @@ function App() {
         <DownloadButton
           disabled={false}
           title="Android"
-          asset="https://github.com/Sebascloe/lissachatina-app/releases/download/v0.2.0/app-release.apk"
+          asset="https://github.com/JesuFrancesco/lissachatina-web/releases/download/v0.2.0-build-44/app-release.apk"
         />
         <DownloadButton
           disabled={true}
           title="iOS"
-          asset="https://github.com/Sebascloe/lissachatina-app/releases/download/v0.2.0/ios_build.tar.gz"
+          asset="https://github.com/JesuFrancesco/lissachatina-web/releases/download/v0.2.0-build-44/ios_build.tar.gz"
         />
       </div>
       <p>¡Descarga la app ahora!</p>
