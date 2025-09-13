@@ -50,15 +50,10 @@ button {
   transition: border-color 0.25s;
 }
 
-<<<<<<< HEAD button:hover {
+button:hover {
   border-color: #95ff64;
 }
 
-=======button:hover {
-  border-color: #95ff64;
-}
-
->>>>>>>294f479a54c038b459f5265c4909a4fc53d19b57 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
@@ -69,7 +64,7 @@ button:focus-visible {
     background-color: #ffffff;
   }
 
-  <<<<<<< HEAD a:hover {
+  a:hover {
     color: #95ff64;
   }
 
@@ -78,13 +73,10 @@ button:focus-visible {
   }
 }
 
-=======a:hover {
+a:hover {
   color: #95ff64;
 }
 
 button {
   background-color: #f9f9f9;
 }
-}
-
->>>>>>>294f479a54c038b459f5265c4909a4fc53d19b57
