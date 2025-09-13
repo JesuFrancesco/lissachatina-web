@@ -1,5 +1,5 @@
 import "@/App.css";
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 import DownloadButton from "@components/DownloadButton";
 import Hero from "@components/Hero";
 import ImageCarousel from "@components/ImageCarousel";

@@ -1,4 +1,4 @@
-import "@/App.css"
+import "@/App.css";
 import { useState, FormEvent } from "react";
 
 const DeleteAccountForm = () => {
@@ -14,17 +14,22 @@ const DeleteAccountForm = () => {
     }
 
     // Handle account deletion logic here
-    await new Promise(r => setTimeout(r, 2000));
+    await new Promise((r) => setTimeout(r, 2000));
 
     alert(`Cuenta eliminada. Proveedor: ${oauthProvider}, Email: ${email}`);
   };
 
   return (
     <div className="max-w-md mx-auto bg-white p-6 rounded-lg shadow-md">
-      <h2 className="text-2xl font-semibold text-center text-gray-800 mb-4">Eliminar Cuenta</h2>
+      <h2 className="text-2xl font-semibold text-center text-gray-800 mb-4">
+        Eliminar Cuenta
+      </h2>
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
-          <label htmlFor="oauth-provider" className="block text-sm font-medium text-gray-700">
+          <label
+            htmlFor="oauth-provider"
+            className="block text-sm font-medium text-gray-700"
+          >
             ¿Qué proveedor de OAuth utilizaste?
           </label>
           <select
@@ -41,7 +46,10 @@ const DeleteAccountForm = () => {
         </div>
 
         <div>
-          <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+          <label
+            htmlFor="email"
+            className="block text-sm font-medium text-gray-700"
+          >
             Correo electrónico asociado a la cuenta:
           </label>
           <input
@@ -62,7 +70,10 @@ const DeleteAccountForm = () => {
             onChange={() => setIsConfirmed(!isConfirmed)}
             className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
           />
-          <label htmlFor="confirm-deletion" className="ml-2 text-sm text-gray-700">
+          <label
+            htmlFor="confirm-deletion"
+            className="ml-2 text-sm text-gray-700"
+          >
             Entiendo que esta acción no es reversible.
           </label>
         </div>
