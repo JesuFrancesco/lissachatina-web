@@ -17,5 +17,7 @@ export const router = createBrowserRouter(
             path: "/eliminar-cuenta",
             element: <EliminarCuentaPage />
         },
-    ]
+    ], {
+        basename: import.meta.env.BASE_URL,
+    }
 )

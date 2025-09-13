@@ -1,5 +1,5 @@
 import "@/App.css";
-
+import { Link } from "react-router-dom"
 import DownloadButton from "@components/DownloadButton";
 import Hero from "@components/Hero";
 import ImageCarousel from "@components/ImageCarousel";
@@ -20,7 +20,7 @@ function HomePage() {
         <DownloadButton
           disabled={false}
           title="Android"
-          asset="https://github.com/JesuFrancesco/lissachatina-web/releases/download/v0.2.1-build-51/app-release.apk"
+          asset="https://github.com/JesuFrancesco/lissachatina-web/releases/download/0.6.0-beta%2B2/app-arm64-v8a-release.apk"
         />
         <DownloadButton
           disabled={true}
@@ -48,7 +48,7 @@ function HomePage() {
         </a>
       </div>
       <footer>
-        <a href="https://jesufrancesco.github.io/lissachatina-web/politica-de-privacidad">Política de privacidad</a>
+        <Link to="/politica-de-privacidad">Política de privacidad</Link>
       </footer>
     </div>
   );

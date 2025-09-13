@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const PDPPage = () => {
     return (
         <main className="flex flex-col text-justify gap-4 p-8">
@@ -42,7 +44,7 @@ const PDPPage = () => {
             <section>
                 <h2 className="font-bold">3. Eliminación de Datos</h2>
                 <p>Si deseas eliminar tu cuenta y los datos asociados a ella, puedes enviar una solicitud para eliminar tu cuenta a través del siguiente enlace:</p>
-                <p><a className="text-red-800" href="https://jesufrancesco.github.io/lissachatina-web/eliminar-cuenta" target="_blank" rel="noopener noreferrer">Eliminar cuenta</a></p>
+                <p><Link className="text-red-800" to="/eliminar-cuenta" replace target="_blank" rel="noopener noreferrer">Eliminar cuenta</Link></p>
 
             </section>
 

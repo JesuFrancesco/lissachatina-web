@@ -14,4 +14,8 @@ export default defineConfig({
   },
   plugins: [react(), tailwindcss()],
   base: "/lissachatina-web/",
+  build: {
+    assetsDir: "/lissachatina-web/",
+    
+  }
 });
