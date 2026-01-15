@@ -4,7 +4,7 @@ const PDPPage = () => {
   return (
     <main className="flex flex-col text-justify gap-4 p-8">
       <header className="text-center">
-        <h1>Política de Privacidad</h1>
+        <h1 className="text-4xl font-bold">Política de Privacidad</h1>
         <p>
           <strong>Última actualización:</strong> 12 de septiembre del 2025
         </p>

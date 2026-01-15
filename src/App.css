@@ -1,21 +1,66 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #95ff64;
+  --color-secondary: #66aa77;
+  --color-background: #282c34;
+  --color-text: #ffffff;
+}
+
+@layer components {
+  .logo {
+    height: 6rem;
+    pointer-events: none;
+  }
+
+  .link {
+    color: var(--color-primary);
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .link:hover {
+    text-decoration: underline;
+  }
+
+}
+
+:root {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background: linear-gradient(135deg,
+          #ffffff 0%,
+          var(--color-primary) 100%);
+  }
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #95ff64);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #95ff64);
 }
 
 @keyframes logo-spin {
@@ -32,7 +77,28 @@
     animation: logo-spin infinite 20s linear;
   }
 }
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
 
-.card {
-  padding: 2em;
+  /* 🔒 FIX */
+  background: linear-gradient(135deg,
+      #000000 0%,
+      #000000 60%,
+      var(--color-primary) 100%);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    background: linear-gradient(135deg,
+        #ffffff 0%,
+        #ffffff 70%,
+        var(--color-primary) 100%);
+  }
 }

@@ -1,4 +1,5 @@
 import "@/App.css";
+import Button from "@/ui/button";
 import { useState, FormEvent } from "react";
 
 const DeleteAccountForm = () => {
@@ -20,7 +21,7 @@ const DeleteAccountForm = () => {
   };
 
   return (
-    <div className="max-w-md mx-auto bg-white p-6 rounded-lg shadow-md">
+    <div className="max-w-lg mx-auto bg-primary/66 p-8 rounded-lg shadow-md">
       <h2 className="text-2xl font-semibold text-center text-gray-800 mb-4">
         Eliminar Cuenta
       </h2>
@@ -36,7 +37,7 @@ const DeleteAccountForm = () => {
             id="oauth-provider"
             value={oauthProvider}
             onChange={(e) => setOauthProvider(e.target.value)}
-            className="mt-1 block w-full px-4 py-2 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+            className="mt-1 block w-full bg-secondary border-primary border px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary"
             required
           >
             <option value="">Selecciona un proveedor</option>
@@ -57,7 +58,7 @@ const DeleteAccountForm = () => {
             id="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="mt-1 block w-full px-4 py-2 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+            className="mt-1 block w-full bg-secondary border-primary border px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary"
             required
           />
         </div>
@@ -79,12 +80,12 @@ const DeleteAccountForm = () => {
         </div>
 
         <div className="mt-4">
-          <button
+          <Button
             type="submit"
-            className="w-full py-2 px-4 font-semibold rounded-lg focus:outline-none"
+            className="w-full py-2 px-4 text-red-500 hover:underline font-semibold rounded-lg focus:outline-none"
           >
             Eliminar cuenta
-          </button>
+          </Button>
         </div>
       </form>
     </div>

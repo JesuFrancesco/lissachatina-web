@@ -1,40 +1,36 @@
 import { handleDownloadClient } from "@/utils/download";
-import androidLogo from "@/assets/android.svg";
-import iosLogo from "@/assets/apple.svg";
+import Button from "@/ui/button";
+import React from "react";
 
+type DownloadButtonProps = React.ComponentPropsWithoutRef<"button"> & {
+  title: string;
+  asset?: string;
+  icon?: string;
+};
 export default function DownloadButton({
+  disabled,
   title,
   asset,
-  disabled,
-}: {
-  title: string;
-  asset: string;
-  disabled: boolean;
-}) {
+  icon,
+  className,
+  ...props
+}: DownloadButtonProps) {
   return (
-    <button
-      onClick={() => handleDownloadClient(asset)}
+    <Button
+      onClick={() => handleDownloadClient(asset!)}
       disabled={disabled}
-      className="font-bold flex align-middle gap-4 flex-row justify-center"
+      className={`hover:font-bold flex align-middle gap-4 flex-row justify-center disabled:cursor-not-allowed disabled:opacity-50 ${className}`}
+      {...props}
     >
-      {title === "Android" ? (
-        <img
-          src={androidLogo}
-          className="dark:invert"
-          alt="Android Logo"
-          width={32}
-          height={32}
-        />
-      ) : (
-        <img
-          src={iosLogo}
-          className="dark:invert"
-          alt="iOS Logo"
-          width={32}
-          height={32}
-        />
-      )}
+      <img
+        src={icon}
+        className="dark:invert"
+        alt={"Logo de " + title}
+        width={32}
+        height={32}
+      />
+
       <div className="flex flex-col justify-center">{title}</div>
-    </button>
+    </Button>
   );
 }
